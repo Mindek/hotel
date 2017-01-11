@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <base href="/">
     <title>Angular QuickStart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="app/assets/css/styles.css">
+    <link rel="stylesheet" href="app/assets/css/bootstrap.min.css" >
 
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -20,19 +21,12 @@
     </script>
   </head>
 
-  <body>
+  <body class="body">
     <my-app>Loading AppComponent content here ...</my-app>
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="app/assets/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-      $('.carousel').carousel({
-        interval: 5000 //changes the speed
-      })
-    </script>
+    <script src="app/assets/js/bootstrap.min.js"></script>
   </body>
 </html>

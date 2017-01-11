@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html"><img src="app/assets/images/logo.png" ></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -88,6 +88,7 @@ import { Component } from '@angular/core';
         </div>
         <!-- /.container -->
     </nav>
+    <div class="navSpacer"></div>
 `
 })
 export class MenuComponent  {
