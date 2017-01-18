@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-  <head>
-    <base href="/">
-    <title>Angular QuickStart</title>
-    <meta charset="UTF-8">
+<head>
+    <base href="/" />
+    <title>Angular 2 User Registration and Login Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app/assets/css/styles.css">
-    <link rel="stylesheet" href="app/assets/css/bootstrap.min.css" >
 
-    <!-- Polyfill(s) for older browsers -->
+    <!-- application css -->
+    <link href="app.css" rel="stylesheet" />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+
+    <!-- polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
 
     <script src="node_modules/zone.js/dist/zone.js"></script>
@@ -17,16 +18,10 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-      System.import('app').catch(function(err){ console.error(err); });
+        System.import('app').catch(function (err) { console.error(err); });
     </script>
-  </head>
-
-  <body class="body">
-    <my-app>Loading AppComponent content here ...</my-app>
-    <!-- jQuery -->
-    <script src="app/assets/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="app/assets/js/bootstrap.min.js"></script>
-  </body>
+</head>
+<body>
+    <my-app>Loading...</my-app>
+</body>
 </html>

@@ -14,19 +14,19 @@ import { Component } from '@angular/core';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="app/assets/images/logo.png" ></a>
+                <a class="navbar-brand" href="index.html"><img src="app/menu/logo.png" ></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="about.html">About</a>
+                        <a routerLink="/about">About</a>
                     </li>
                     <li>
-                        <a href="services.html">Services</a>
+                        <a routerLink="/services">Services</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a routerLink="/contact">Contact</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
@@ -62,25 +62,8 @@ import { Component } from '@angular/core';
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="full-width.html">Full Width Page</a>
-                            </li>
-                            <li>
-                                <a href="sidebar.html">Sidebar Page</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                            <li>
-                                <a href="pricing.html">Pricing Table</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a routerLink="/login">Login</a>
                     </li>
                 </ul>
             </div>

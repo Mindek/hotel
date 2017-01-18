@@ -1,32 +1,57 @@
-import { NgModule }      from '@angular/core';
+﻿import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
+import { FormsModule }    from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { AppComponent }  from './components/app.component';
-import {MenuComponent} from "./components/menu.component";
-import {HomeComponent} from "./components/home.component";
-import {FooterComponent} from "./components/footer.component";
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers/index';
+import { MockBackend, MockConnection } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+import { AppComponent }  from './app.component';
+import { routing }        from './app.routing';
 
-  //{ path: '**', component: PageNotFoundComponent }
-];
+import { AlertComponent } from './_directives/index';
+import { AuthGuard } from './_guards/index';
+import { AlertService, AuthenticationService, UserService } from './_services/index';
+import { HomeComponent } from './home/index';
+import { RegisterComponent } from './register/index';
+import {MenuComponent} from "./menu/menu.component";
+import {FooterComponent} from "./footer/footer.component";
+import {LoginComponent} from "./login/login.component";
+import {AboutComponent} from "./about/about.component";
+import {ServiceComponent} from "./service/service.component";
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(appRoutes),
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        routing
+    ],
+    declarations: [
+        AppComponent,
+        AlertComponent,
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent,
+        MenuComponent,
+        FooterComponent,
+        AboutComponent,
+        ServiceComponent
+    ],
+    providers: [
+        AuthGuard,
+        AlertService,
+        AuthenticationService,
+        UserService,
 
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    HomeComponent,
-    FooterComponent
-  ],
-
-  bootstrap:    [ AppComponent]
-
+        // providers used to create fake backend
+        fakeBackendProvider,
+        MockBackend,
+        BaseRequestOptions
+    ],
+    bootstrap: [AppComponent]
 })
+
 export class AppModule { }

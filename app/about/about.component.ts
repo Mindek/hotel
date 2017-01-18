@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  template: `
+    selector: 'about',
+    template: `
 <div class="container">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -76,7 +76,7 @@ Dogodna lokalizacja hotelu pozwala na spokojny wypoczynek i zarazem uniknięcie 
 </script>
 `
 })
-export class HomeComponent  {
-  name = 'Angular';
+export class AboutComponent  {
+    name = 'Angular';
 
 }
