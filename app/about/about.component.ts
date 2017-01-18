@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'about',
     template: `
-<div class="container">
+<div class="container content-container">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
