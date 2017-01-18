@@ -14,16 +14,19 @@ import { Component } from '@angular/core';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="app/menu/logo.png" ></a>
+                <a class="navbar-brand" routerLink="/about"><img src="app/menu/logo.png" ></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a routerLink="/about">O Nas</a>
+                        <a routerLink="/about">O nas</a>
                     </li>
                     <li>
-                        <a routerLink="/services">Services</a>
+                        <a routerLink="/rating">Oceń nas</a>
+                    </li>
+                    <li>
+                        <a routerLink="/comments">Opinie</a>
                     </li>
                     <li>
                         <a routerLink="/gallery">Galeria</a>

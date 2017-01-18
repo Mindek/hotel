@@ -20,9 +20,10 @@ import {MenuComponent} from "./menu/menu.component";
 import {FooterComponent} from "./footer/footer.component";
 import {LoginComponent} from "./login/login.component";
 import {AboutComponent} from "./about/about.component";
-import {ServiceComponent} from "./service/service.component";
 import {GalleryComponent} from "./gallery/galery.component";
 import {ContactComponent} from "./contact/contact.component";
+import {RatingComponent} from "./rating/rating.component";
+import {CommentsComponent} from "./comments/comments.component";
 
 @NgModule({
     imports: [
@@ -40,9 +41,10 @@ import {ContactComponent} from "./contact/contact.component";
         MenuComponent,
         FooterComponent,
         AboutComponent,
-        ServiceComponent,
         GalleryComponent,
-        ContactComponent
+        ContactComponent,
+        RatingComponent,
+        CommentsComponent
     ],
     providers: [
         AuthGuard,
