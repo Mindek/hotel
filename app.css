@@ -29,6 +29,15 @@
     min-height: calc(100vh - 250px);
 }
 
+.alert-container {
+    border-bottom: #9a9a9a solid 1px;
+}
+
+.alert-logo {
+    width: calc(100% - 215px);
+    margin-left: auto;
+}
+
 .body {
     background-color: #f4f4ea;
 }

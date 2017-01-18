@@ -1,7 +1,7 @@
 "use strict";
-var router_1 = require("@angular/router");
-var index_1 = require("./register/index");
-var index_2 = require("./_guards/index");
+var router_1 = require('@angular/router');
+var index_1 = require('./register/index');
+var index_2 = require('./_guards/index');
 var login_component_1 = require("./login/login.component");
 var about_component_1 = require("./about/about.component");
 var service_component_1 = require("./service/service.component");
