@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'gallery',
-    template: `
-    Galeria
-
-`
+    moduleId: module.id,
+    templateUrl: 'gallery.component.html'
 })
 export class GalleryComponent  {
-
 }

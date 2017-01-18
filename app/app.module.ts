@@ -21,7 +21,7 @@ import {FooterComponent} from "./footer/footer.component";
 import {LoginComponent} from "./login/login.component";
 import {AboutComponent} from "./about/about.component";
 import {ServiceComponent} from "./service/service.component";
-import {GalleryComponent} from "./gallery/galery.component";
+import {GalleryComponent} from "./gallery/gallery.component";
 import {ContactComponent} from "./contact/contact.component";
 
 @NgModule({
