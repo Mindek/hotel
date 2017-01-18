@@ -26,6 +26,7 @@
     background-color: #eaeaea;
     border-left: #9a9a9a solid 1px;
     border-right: #9a9a9a solid 1px;
+    min-height: calc(100vh - 250px);
 }
 
 .body {
