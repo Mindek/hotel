@@ -21,14 +21,12 @@ import {FooterComponent} from "./footer/footer.component";
 import {LoginComponent} from "./login/login.component";
 import {AboutComponent} from "./about/about.component";
 
-import {GalleryComponent} from "./gallery/galery.component";
-
-
 
 
 import {ContactComponent} from "./contact/contact.component";
 import {RatingComponent} from "./rating/rating.component";
 import {CommentsComponent} from "./comments/comments.component";
+import {GalleryComponent} from "./gallery/gallery.component";
 
 @NgModule({
     imports: [
