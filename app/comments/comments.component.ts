@@ -4,12 +4,8 @@ import {CommentService} from "../_services/comment.service";
 
 @Component({
     selector: 'comments',
-    template: `
-    <div class="container content-container">
-        <br><br><br><br>
-        komenciki TUTAJ!!
-    </div>
-`
+    moduleId: module.id,
+    templateUrl: 'comments.component.html'
 })
 export class CommentsComponent  {
     comments: UserComment[] = [];

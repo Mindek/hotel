@@ -7,7 +7,7 @@ export class CommentService {
     constructor(private http: Http) { }
 
     saveComment(username: string, message: string) {
-        return this.http.post('/api/comments', JSON.stringify({ username: username, password: message }))
+        return this.http.post('/api/comments', JSON.stringify({ username: username, message: message }))
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let user = response.json();

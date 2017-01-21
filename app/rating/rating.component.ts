@@ -16,7 +16,7 @@ import {AlertService} from "../_services/alert.service";
                 <!--<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>-->
             </div>
             <div class="form-group" >
-                <textarea rows=7 type="text" class="form-control" placeholder="Leave your comment here" name="message" [(ngModel)]="model.message" required ></textarea>
+                <textarea rows="7" type="text" class="form-control" placeholder="Leave your comment here" name="message" [(ngModel)]="model.message" required ></textarea>
                 <!--<div *ngIf="f.submitted && !massage.valid" class="help-block">massage is required</div>-->
             </div> 
             <div class="form-group">
