@@ -27,6 +27,7 @@ import {ContactComponent} from "./contact/contact.component";
 import {RatingComponent} from "./rating/rating.component";
 import {CommentsComponent} from "./comments/comments.component";
 import {GalleryComponent} from "./gallery/gallery.component";
+import {CommentService} from "./_services/comment.service";
 
 @NgModule({
     imports: [
@@ -54,6 +55,7 @@ import {GalleryComponent} from "./gallery/gallery.component";
         AlertService,
         AuthenticationService,
         UserService,
+        CommentService,
 
         // providers used to create fake backend
         fakeBackendProvider,

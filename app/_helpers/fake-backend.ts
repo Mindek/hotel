@@ -7,6 +7,7 @@ export let fakeBackendProvider = {
     useFactory: (backend: MockBackend, options: BaseRequestOptions) => {
         // array in local storage for registered users
         let users: any[] = JSON.parse(localStorage.getItem('users')) || [];
+        let comments: any[] = JSON.parse(localStorage.getItem('comments')) || [];
 
         // configure fake backend
         backend.connections.subscribe((connection: MockConnection) => {
@@ -115,6 +116,27 @@ export let fakeBackendProvider = {
                         connection.mockRespond(new Response(new ResponseOptions({ status: 401 })));
                     }
                 }
+
+                //create comment
+                if (connection.request.url.endsWith('/api/comments') && connection.request.method === RequestMethod.Post) {
+                    // get new user object from post body
+                    //let newUser = JSON.parse(connection.request.getBody());
+                    let newComment = JSON.parse(connection.request.getBody());
+
+                    // save new user
+                    newComment.id = comments.length + 1;
+                    comments.push(newComment);
+                    localStorage.setItem('comments', JSON.stringify(comments));
+
+                    // respond 200 OK
+                    connection.mockRespond(new Response(new ResponseOptions({ status: 200 })));
+                }
+
+                // get users
+                if (connection.request.url.endsWith('/api/comments') && connection.request.method === RequestMethod.Get) {
+                    connection.mockRespond(new Response(new ResponseOptions({ status: 200, body: comments })));
+                }
+
 
             }, 500);
 
