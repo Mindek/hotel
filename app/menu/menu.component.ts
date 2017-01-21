@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
+import {AuthenticationService} from "../_services/authentication.service";
 
 @Component({
+  host: {
+    '(document:click)': 'onClick($event)',
+  },
   selector: 'menu-component',
   template: `
     <!-- Navigation -->
@@ -35,7 +39,7 @@ import { Component } from '@angular/core';
                         <a routerLink="/contact">Kontakt</a>
                     </li>
                     <li>
-                        <a routerLink="/login">Zaloguj</a>
+                        <a routerLink="/login">{{ texLog }}</a>
                     </li>
                 </ul>
             </div>
@@ -46,7 +50,28 @@ import { Component } from '@angular/core';
     <div class="navSpacer"></div>
 `
 })
-export class MenuComponent  {
-  name = 'Angular';
+export class MenuComponent{
+  texLog: string;
+
+  constructor(private authenticationService: AuthenticationService) {
+    this.setText();
+  }
+
+
+  @HostListener('click') onClick(){
+    this.setText();
+  }
+
+  setText()
+  {
+    console.log("ssss");
+    if(localStorage.getItem('currentUser'))
+    {
+      this.texLog = "Wyloguj";
+    }
+    else {
+      this.texLog = "Zaloguj";
+    }
+  }
 
 }
