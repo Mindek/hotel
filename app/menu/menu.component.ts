@@ -20,10 +20,10 @@ import {User} from "../_models/user";
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                      <div *ngIf="ls.getItem('currentUser') && setCurrentUser().firstName == 'admin'">
+                    <li *ngIf="ls.getItem('currentUser') && setCurrentUser().firstName == 'admin'">
+                      <!--<div >-->
                             <a routerLink="/home">ADMIN</a>
-                      </div>
+                      <!--</div>-->
                     </li>
                     
                     <li>
