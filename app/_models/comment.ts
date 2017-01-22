@@ -1,4 +1,6 @@
 export class UserComment {
+    id: number;
+
     username: string;
     message: string;
 

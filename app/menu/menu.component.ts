@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {User} from "../_models/user";
 
 @Component({
   selector: 'menu-component',
@@ -19,6 +20,12 @@ import { Component } from '@angular/core';
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <div *ngIf="ls.getItem('currentUser') && setCurrentUser().firstName == 'admin'">
+                            <a routerLink="/home">ADMIN</a>
+                      </div>
+                    </li>
+                    
                     <li>
                         <a routerLink="/about">O nas</a>
                     </li>
@@ -49,4 +56,11 @@ import { Component } from '@angular/core';
 export class MenuComponent  {
   name = 'Angular';
   ls = localStorage;
+  ad:User;
+  setCurrentUser()
+  {
+    console.log(JSON.parse(this.ls.getItem("currentUser")).firstName);
+    return this.ad = JSON.parse(this.ls.getItem("currentUser"));
+  }
+
 }

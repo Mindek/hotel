@@ -8,9 +8,10 @@ import {GalleryComponent} from "./gallery/gallery.component";
 import {ContactComponent} from "./contact/contact.component";
 import {RatingComponent} from "./rating/rating.component";
 import {CommentsComponent} from "./comments/comments.component";
+import {HomeComponent} from "./home/home.component";
 
 const appRoutes: Routes = [
-    // { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'home', component: HomeComponent},
     { path: '', component: AboutComponent },
     { path: 'about', component: AboutComponent},
     { path: 'login', component: LoginComponent },
